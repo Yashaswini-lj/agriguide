@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}AGRIGUIDE | Crop Recommendation{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">🌿 SIMPLE FARMING GUIDANCE</span>
+    <h1>Choose the <span>Right Crop</span> for Your Field</h1>
+    <p>Enter your soil type, growing season, and expected weather. AGRIGUIDE uses clear, predefined farming rules to suggest crops that may suit your conditions.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="{{ url_for('predict') if session.get('user_id') else url_for('register') }}">Find Suitable Crops →</a>
+      <a class="btn secondary" href="{{ url_for('login') }}">Farmer Login</a>
+    </div>
+    <div class="mini-stats"><div><strong>3</strong><span>Simple inputs</span></div><div><strong>7</strong><span>Soil types</span></div><div><strong>4</strong><span>Seasons</span></div></div>
+  </div>
+  <div class="hero-art" role="img" aria-label="Farmer working in a green field"><div class="sun"></div><div class="cloud cloud-one">☁️</div><div class="field f1"></div><div class="field f2"></div><div class="field f3"></div><div class="farmer">👨🏽‍🌾</div><div class="farmer-tool">🧺</div><div class="plant p1">🌾</div><div class="plant p2">🌱</div><div class="plant p3">🌿</div><div class="farmer-caption">🌾 ರೈತರಿಗಾಗಿ ಸರಳ ಬೆಳೆ ಸಲಹೆ</div></div>
+</section>
+
+<section class="section">
+  <div class="section-head"><span class="eyebrow">WHY AGRIGUIDE?</span><h2>Simple inputs. Clear crop suggestions.</h2></div>
+  <div class="feature-grid">
+    <article class="feature"><div class="icon">🌱</div><h3>Soil-Based Suggestions</h3><p>Choose red, sandy, black, clay, loamy, alluvial, or laterite soil to find crops associated with that soil type.</p></article>
+    <article class="feature"><div class="icon">🌦️</div><h3>Season & Weather Rules</h3><p>Recommendations compare your selected season and expected weather with the crop conditions stored in the application.</p></article>
+    <article class="feature"><div class="icon">📚</div><h3>Saved History</h3><p>Sign in to save recommendations and revisit your previous soil, season, and weather selections.</p></article>
+  </div>
+</section>
+
+<section class="steps section">
+  <div><span class="eyebrow">HOW IT WORKS</span><h2>Three easy steps</h2>
+  <div class="step-grid">
+    <div><b>01</b><h3>Select soil</h3><p>Choose the main soil type in your field.</p></div>
+    <div><b>02</b><h3>Choose season & weather</h3><p>Tell us when you plan to grow and whether the weather is dry, cloudy, or rainy.</p></div>
+    <div><b>03</b><h3>View suitable crops</h3><p>Read the rule-based crop suggestions and their matching reasons.</p></div>
+  </div></div>
+</section>
+<div class="note">🌾 AGRIGUIDE uses predefined Python rules with a Flask web application. It does not use AI or machine learning. Recommendations are general guidance; confirm planting decisions with local agriculture experts.</div>
+{% endblock %}

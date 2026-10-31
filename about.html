@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}About | AGRIGUIDE{% endblock %}
+{% block content %}
+<section class="page-head"><span class="eyebrow">ABOUT THE PROJECT</span><h1>AGRIGUIDE</h1><p>A crop recommendation website built with HTML, CSS, JavaScript, Python, Flask, and SQLite.</p></section>
+<div class="about-grid">
+  <section class="result-card"><h2>How recommendations work</h2><p>The farmer selects soil type, growing season, and expected weather. Python compares these selections with predefined crop rules and ranks crops by how well their conditions match. No AI, machine learning, trained model, or scikit-learn is used.</p></section>
+  <section class="result-card"><h2>Website technologies</h2><p>HTML structures the pages, CSS styles the interface, JavaScript supports browser interactions, Flask handles requests and recommendations, and SQLite stores accounts and prediction history.</p></section>
+  <section class="result-card"><h2>Project limitation</h2><p>The suggestions are based on general predefined rules and are for educational guidance. Actual suitability also depends on local climate, soil testing, irrigation, crop variety, and regional farming practices.</p></section>
+  <section class="result-card"><h2>Future improvements</h2><p>The rule list can be reviewed with local agriculture experts and updated for regional crops, Kannada language support, and verified local farming guidance.</p></section>
+</div>
+{% endblock %}
